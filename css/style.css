@@ -1,0 +1,106 @@
+/* Web Fonts ----------------------- */
+
+/* ovo radis ovako kada u retkim situacijama kada koristis font koji imas na kompu
+@font-face {
+
+  font-family:'Abolition Regular';
+  src:url('../fonts/abolition-regular-webfont.woff') format('woff');
+
+}
+*/
+
+body {
+
+/*DUZA VERZIJA - SKRACENA JE ISPOD
+  font-family: 'Work Sans', sans-serif;
+  font-weight:300;
+  line-height:1.5;             normalno je 1.2, 1.5 je preporuka za text
+*/
+  
+  font: 300 100%/1.5 'Work Sans', sans-serif;
+  /* ovih 100% oznacava font size koja je 100% od root velicine sto je u ovom slucaju 20px */
+  color:#454959;
+    
+  margin: 1rem;
+  
+}
+
+h1, h2 {
+
+  font-family:'Abolition Regular', Impact, Charcoal, sans-serif;
+  font-weight:normal;
+  font-size: 3rem;
+  line-height:1.1;
+  
+/*  font: 500 300%/1.1 'Abolition Regular', sans-serif;         ne znam da li sam ovo dobro skratio pitaj nekoga*/
+
+}
+
+h1 {
+  font-size: 4rem;
+}
+/*dodavanje kontenta sa CSSom kada je samo dekorativne prirode koristi se before i afte
+zanimljiv link sa simbolima https://www.toptal.com/designers/htmlarrows/arrows/
+display block da bi sisao u red ispod
+*/
+h1::after {
+    content: '\2193';
+    display: block;
+}
+
+
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+
+
+
+/* Base Styles --------------------- */
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 1.25em; /* 20px on most screens */  
+}
+img {
+  width: 100%; /* responsive images */
+}
+
+
+/* Main Styles --------------------- */
+
+header {
+    padding: 10vh 1rem;
+    background-color: #f3753b;
+    margin: -1rem -1rem -1rem;
+}
+
+header, footer {
+    text-align: center;
+}
+
+.title {
+    letter-spacing: 1px;
+}
+
+main {
+    hyphens: auto; /*za duge reci ili recenice, mozes i na HTML da stavis pravilo ili gde vec imas duge reci*/
+}
+
+#wildlife {
+  padding: 20% 15%;
+  border-top: 12px solid #f3753b;
+  border-radius: 12px 12px 0 0;
+  background: url(../img/bear.jpg) #454959 center / cover;
+  /* kod pozicije moze vise vrednosti ali da su povezane sa /
+  
+  https://css-tricks.com/almanac/properties/b/background/
+  */
+  color: white;
+  box-shadow: inset 0 0 20px 10px rgba(0, 10, 30, .8);
+}
+
+/* Media Queries ------------------- */
