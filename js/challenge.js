@@ -18,18 +18,28 @@ if(a3.toUpperCase() === 'JS'){
 if(a4.toUpperCase() === 'SASS'){
     score += 1;
 }
-if(+a5.toUpperCase() === 1){
+if(+a5 === 1){
     score += 1;
 }
 
+let kruna;
+
 if(score === 5){
     console.log(`U got the gold!!!`);
-} else if(score === 4 || score === 3){
+    kruna = 'ZLATNU';
+} else if(score >= 3){
     console.log(`U got the silver!!!`);
-} else if(score === 2 || score === 1){
+    kruna = 'SREBRNU';
+} else if(score >=1){
     console.log(`U got the bronze!!!`);
-} else if(score === 0){
+    kruna = 'BRONANU';
+} else{
     console.log(`U got the nothing lool!!!`);
+    kruna = 'ni jednu lolo'
 }
 
+
+
 //console.log(`Osvojen broj bodova je ${score}`);
+
+document.querySelector('main').innerHTML =`<p>osvojio si ${score} poena</p><p>i dobio si ${kruna} krunu</p>`;
